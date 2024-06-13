@@ -1,4 +1,6 @@
 import { Outlet } from "react-router-dom";
+import Footer from "../common/footer/Footer";
+import Header from "../common/header/Header";
 
 interface Props {
   children?: React.ReactNode;
@@ -7,11 +9,10 @@ interface Props {
 export default function AppLayout({ children }: Props): JSX.Element {
   return (
     <>
-      {/* <Header/> */}
+      <Header />
       <Outlet />
       {children}
-
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

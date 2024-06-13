@@ -8,6 +8,7 @@ export default function ProtectedComponent({
   Element,
   title = "KINESS",
 }: {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   Element: any;
   title?: string;
   url?: string;
@@ -32,8 +33,7 @@ export default function ProtectedComponent({
         FallbackComponent={ErrorTemp}
         onReset={(detail) => {
           console.log(detail);
-        }}
-      >
+        }}>
         <Element />
       </ErrorBoundary>
     </React.Fragment>
